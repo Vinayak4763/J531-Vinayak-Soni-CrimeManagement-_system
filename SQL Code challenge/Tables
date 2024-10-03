@@ -1,0 +1,29 @@
+CREATE TABLE Crime (
+    CrimeID INT, IncidentType VARCHAR(30) NOT NULL,
+    IncidentDate DATE NOT NULL,
+    Location VARCHAR(255), Description TEXT,
+    Status VARCHAR(20) NOT NULL,
+    CONSTRAINT crime_crime_id_pk PRIMARY KEY (CrimeID)
+);
+			
+
+CREATE TABLE Victim (
+    VictimID INT NOT NULL,
+    CrimeID INT NOT NULL,
+    Name VARCHAR(30) NOT NULL,  
+    ContactInfo VARCHAR(30) UNIQUE, 
+    Injuries VARCHAR(30),   
+    CONSTRAINT victim_victim_id_pk PRIMARY KEY (VictimID),
+    CONSTRAINT victim_CrimeId FOREIGN KEY (CrimeID) REFERENCES Crime(CrimeID)  
+);
+
+CREATE TABLE Suspect (
+    SuspectID INT NOT NULL,
+    CrimeID INT NOT NULL,
+    Name VARCHAR(30) NOT NULL, 
+    Description TEXT,
+    CriminalHistory TEXT,
+    CONSTRAINT suspect_suspectID_pk PRIMARY KEY (SuspectID), 
+    CONSTRAINT suspect_suspectID_fk FOREIGN KEY (CrimeID) REFERENCES Crime(CrimeID) 
+);
+
