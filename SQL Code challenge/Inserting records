@@ -1,0 +1,35 @@
+    // Crime table //
+
+mysql> INSERT INTO Crime (CrimeID, IncidentType, IncidentDate, Location, Description, Status)
+    -> VALUES
+    -> (7, 'Kidnapping', '2023-07-25', 'Mumbai', 'Kidnapping case under investigation', 'Open'),
+    -> (8, 'Homicide', '2023-06-30', 'Kolkata', 'Multiple homicide case', 'Open'),
+    -> (9, 'Robbery', '2023-09-05', 'Pune', 'Bank robbery at a city branch', 'Open');
+Query OK, 3 rows affected (0.01 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+
+//  Victim Table  //
+
+mysql> INSERT INTO Victim VALUES
+    ->     (1, 1, 'Rajesh Sharma', 'rajesh@example.com', 'Minor'),
+    ->     (2, 2, 'Anita Verma', 'anita@example.com', 'Deceased'),
+    ->     (3, 3, 'Aarav Singh', 'aarav@example.com', 'None'),
+    ->     (4, 4, 'Priya Desai', 'priya@example.com', 'None'),
+    ->     (5, 5, 'Sonia Gupta', 'sonia@example.com', 'Minor injuries'),
+    ->     (6, 6, 'Karan Mehta', 'karan@example.com', 'Severe injuries');
+Query OK, 6 rows affected (0.02 sec)
+Records: 6  Duplicates: 0  Warnings: 0
+
+
+// suspect table //
+
+mysql> INSERT INTO Suspect VALUES
+    ->     (1, 1, 'Vikram Reddy', 'Armed and masked robber', 'Previous robbery convictions'),
+    ->     (2, 2, 'Unknown', 'Investigation ongoing', NULL),
+    ->     (3, 3, 'Ravi Kumar', 'Shoplifting suspect', 'Prior shoplifting arrests'),
+    ->     (4, 4, 'Suresh Yadav', 'Suspected fraudster', 'None'),
+    ->     (5, 5, 'Deepak Patel', 'Kidnapping suspect', 'Previous kidnapping charges'),
+    ->     (6, 6, 'Neha Soni', 'Assault suspect', 'None');
+Query OK, 6 rows affected (0.02 sec)
+Records: 6  Duplicates: 0  Warnings: 0
