@@ -1,7 +1,0 @@
-//database creation//
-
-create database crimemanagement; 
-
-//using database//
-
-use crimemanagement;
