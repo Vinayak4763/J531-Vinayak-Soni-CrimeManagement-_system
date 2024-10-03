@@ -2,12 +2,14 @@
 
 mysql> INSERT INTO Crime (CrimeID, IncidentType, IncidentDate, Location, Description, Status)
     -> VALUES
-    -> (7, 'Kidnapping', '2023-07-25', 'Mumbai', 'Kidnapping case under investigation', 'Open'),
-    -> (8, 'Homicide', '2023-06-30', 'Kolkata', 'Multiple homicide case', 'Open'),
-    -> (9, 'Robbery', '2023-09-05', 'Pune', 'Bank robbery at a city branch', 'Open');
-Query OK, 3 rows affected (0.01 sec)
-Records: 3  Duplicates: 0  Warnings: 0
-
+    ->     (1, 'Robbery', '2023-09-15', 'Connaught Place', 'Armed robbery at a jewelry store', 'Open'),
+    ->     (2, 'Homicide', '2023-09-20', 'Andheri', 'Investigation into a murder case', 'Under Investigation'),
+    ->     (3, 'Theft', '2023-09-10', 'Bangalore', 'Shoplifting incident at a mall', 'Closed'),
+    ->     (4, 'Fraud', '2023-08-15', 'Chennai', 'Online fraud case reported', 'Open'),
+    ->     (5, 'Kidnapping', '2023-08-20', 'Hyderabad', 'Child kidnapping case under investigation', 'Under Investigation'),
+    ->     (6, 'Assault', '2023-09-01', 'Delhi', 'Physical assault at a local park', 'Closed');
+Query OK, 6 rows affected (0.05 sec)
+Records: 6  Duplicates: 0  Warnings: 0
 
 //  Victim Table  //
 
